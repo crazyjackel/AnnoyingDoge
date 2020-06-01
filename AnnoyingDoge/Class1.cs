@@ -13,7 +13,7 @@ using MonsterTrainModdingAPI.Utilities;
 namespace AnnoyingDoge
 {
     // Credit to Rawsome, Stable Infery for the base of this method.
-    [BepInPlugin("com.name.package.generic", "Test Plugin", "0.1")]
+    [BepInPlugin("io.github.crazyjackel.ADP", "Annoying Dog Plugin", "1.0")]
     [BepInProcess("MonsterTrain.exe")]
     [BepInProcess("MtLinkHandler.exe")]
     [BepInDependency("api.modding.train.monster")]
@@ -24,7 +24,7 @@ namespace AnnoyingDoge
         public RectTransform AnnoyingDogeTransform;
         void Awake()
         {
-            var harmony = new Harmony("com.name.package.generic");
+            var harmony = new Harmony("io.github.crazyjackel.ADP");
             harmony.PatchAll();
 
 
