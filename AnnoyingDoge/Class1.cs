@@ -46,7 +46,7 @@ namespace AnnoyingDoge
 
         void Update()
         {
-            AnnoyingDogeTransform.position += 0.05f * new Vector3(20*(float)Math.Sin(Time.time/20), 19*(float)Math.Cos(Time.time/21));
+            AnnoyingDogeTransform.position = 400 * new Vector3((float)Math.Sin(Time.time/23), (float)Math.Cos(Time.time/29));
         }
     }
 }
