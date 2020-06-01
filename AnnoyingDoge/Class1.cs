@@ -28,12 +28,12 @@ namespace AnnoyingDoge
             harmony.PatchAll();
 
 
-            Canvas = GameObject.Instantiate(AssetBundleUtils.LoadAssetFromPath<GameObject>("prefab","canvas"));
+            Canvas = GameObject.Instantiate(AssetBundleUtils.LoadAssetFromPath<GameObject>("prefab", "canvas"));
             AnnoyingDoge = Canvas.transform.Find("Image").gameObject;
             AnnoyingDogeTransform = (RectTransform)AnnoyingDoge.transform;
             DontDestroyOnLoad(Canvas);
 
-            
+
         }
 
         void Start()
@@ -46,7 +46,8 @@ namespace AnnoyingDoge
 
         void Update()
         {
-            AnnoyingDogeTransform.position = 400 * new Vector3((float)Math.Sin(Time.time/23), (float)Math.Cos(Time.time/29));
+
+            AnnoyingDogeTransform.position = new Vector3(Screen.width / 2 + (Screen.width / 2) * (float)Math.Sin(4 * Time.time / 7), Screen.height / 2 + (Screen.height / 2) * (float)Math.Cos(4 * Time.time / 11), 0);
         }
     }
 }
